@@ -5,8 +5,9 @@ import routes from './Routes/users.js'
 const app = express();
 const PORT = 5000;
 
-app.use('/users', routes)
 app.use(bodyParser.json());
+app.use('/users', routes)
+
 
 app.get('/', (req,res)  => {
     console.log('[GET ROUTE]')
